@@ -3,7 +3,9 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  a = array[0]
+  b = array[1]
+  a <= b ? (a..b).reduce(:+) : (b..a).reduce(:+)
 end
 
 # Driver code - don't touch anything below this line.
