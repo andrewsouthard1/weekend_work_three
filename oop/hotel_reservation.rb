@@ -31,4 +31,22 @@ end
 # The add_a_fridge method
 # The add_a_crib method
 # The add_a_custom_amenity method
+smith_reservation = HotelReservation.new({customer_name: "Smith", date: "2017-04-20", room_number: 273})
+
+p "Room number before running setter: #{smith_reservation.room_number}"
+smith_reservation.room_number = 55
+p "Room number after running setter: #{smith_reservation.room_number}"
+
+p "amenities before using add_a_fridge #{smith_reservation.amenities}"
+smith_reservation.add_a_fridge
+p "amenities after using add_a_fridge #{smith_reservation.amenities}"
+
+p "amenities before using add_a_crib #{smith_reservation.amenities}"
+smith_reservation.add_a_crib
+p "amenities after using add_a_crib #{smith_reservation.amenities}"
+
+p "amenities before using add_a_custom_amenity #{smith_reservation.amenities}"
+smith_reservation.add_a_custom_amenity("mini-bar")
+p "amenities after using add_a_custom_amenity #{smith_reservation.amenities}"
+
 
